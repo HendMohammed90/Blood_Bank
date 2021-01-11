@@ -63,35 +63,36 @@
                         <h2 id="heading" class=" mt-3 text-center">Donor Registration</h2>
                         <div class="hBorder m-auto"></div>
                     </div>
-                    <form class="mt-5 px-4">
+                    <form class="mt-5 px-4" method="POST" action="/donerRegs">
+                        @csrf
                         <div class="form-group">
-                            <input type="text" class="form-control" id="inputName" placeholder="name">
+                            <input name="name" type="text" class="form-control" id="inputName" placeholder="name">
                             <small id="passwordHelpBlock" class="form-text text-muted">
                                 Your name must be 4-20 characters long, contain letters and  spaces, and must not contain special characters, or emoji, and first letter must be camel case.
                             </small>
                         </div>
                         <div class="form-group">
-                            <input type="text" class=" form-control" id="inputAddress" placeholder="full address">
+                            <input name="address" type="text" class=" form-control" id="inputAddress" placeholder="full address">
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <input type="text" class="alaa form-control phoneNum" id="inputPhone"
+                                <input name="phone" type="text" class="alaa form-control phoneNum" id="inputPhone"
                                        placeholder="phone number">
                             </div>
                             <div class="form-group col-md-6">
-                                <input type="text" class="form-control phoneNum" id="inputPhone2"
+                                <input name="AnotherPhone" type="text" class="form-control phoneNum" id="inputPhone2"
                                        placeholder="anthor number">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <input type="text" class="form-control" id="inputAge" placeholder="age">
+                                <input name="age" type="text" class="form-control" id="inputAge" placeholder="age">
                                 <small id="passwordHelpBlock" class="form-text text-muted">
                                     Your age must be 18-65 years old, contain numbers only.
                                 </small>
                             </div>
                             <div class="form-group col-md-6">
-                                <input type="text" class="form-control" id="inputweight" placeholder="weight">
+                                <input name="weight" type="text" class="form-control" id="inputweight" placeholder="weight">
                                 <small id="passwordHelpBlock" class="form-text text-muted">
                                     Your weight must be 40-150 Kg, contain numbers only.
                                 </small>
@@ -99,31 +100,31 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-4">
-                                <select id="inputState" class="form-control alert-dark">
+                                <select name="bloodType" id="inputState" class="form-control alert-dark">
                                     <option selected>blood type</option>
-                                    <option>O+</option>
-                                    <option>O-</option>
-                                    <option>B+</option>
-                                    <option>B-</option>
-                                    <option>A+</option>
-                                    <option>A-</option>
-                                    <option>AB+</option>
-                                    <option>AB-</option>
+                                    <option >O+</option>
+                                    <option >O-</option>
+                                    <option >B+</option>
+                                    <option >B-</option>
+                                    <option >A+</option>
+                                    <option >A-</option>
+                                    <option >AB+</option>
+                                    <option >AB-</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-4">
-                                <select id="inputState" class="form-control alert-dark">
+                                <select name="smoking" id="inputState" class="form-control alert-dark">
                                     <option selected>Are you smoking?</option>
-                                    <option>yes</option>
-                                    <option>no</option>
+                                    <option value="1">yes</option>
+                                    <option value="0" >no</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-4">
-                                <select id="inputState" class="form-control alert-dark">
+                                <select name="timeForCall" id="inputState" class="form-control alert-dark">
                                     <option selected>time of calling</option>
-                                    <option>24 hours</option>
-                                    <option>from 8am to 3pm</option>
-                                    <option>from 3pm to 11pm</option>
+                                    <option value="24 Hours" >24 hours</option>
+                                    <option value="From 8 AM to 3 PM">from 8am to 3pm</option>
+                                    <option value="From 3 PM to 11 PM">from 3pm to 11pm</option>
                                 </select>
                             </div>
                         </div>
@@ -132,14 +133,14 @@
                             <label class="form-check-label check">calling way:</label>
                             <div class="form-check form-check-inline">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="checkbox" name="inlineRadioOptions"
-                                           id="inlineRadio1" value="option1"> SMS
+                                    <input  class="form-check-input" type="checkbox" name="callingWay"
+                                           id="inlineRadio1" value="option 1"> SMS
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="checkbox" name="inlineRadioOptions"
-                                           id="inlineRadio2" value="option2"> phone call
+                                    <input class="form-check-input" type="checkbox" name="callingWay"
+                                           id="inlineRadio2" value="option 1"> phone call
                                 </label>
                             </div>
                         </div>
@@ -148,23 +149,44 @@
                             <label class="form-check-label check">gander:</label>
                             <div class="form-check form-check-inline">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                    <input class="form-check-input" type="radio" name="gender"
                                            id="inlineRadio1" value="option1"> male
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                    <input class="form-check-input" type="radio" name="gender"
                                            id="inlineRadio2" value="option2"> female
                                 </label>
                             </div>
                         </div>
-                        <button id="addBtn" type="submit" class="btn btn-lg rounded-0">SEND
-                            MESSAGE</button>
+                        <button  type="submit" id="addBtn"  class="btn btn-lg rounded-0">Send
+                            Request</button>
                     </form>
-
-
                 </div>
+                <table class="text-center">
+                    <tr>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Address</th>
+                        <th>Phone Number</th>
+                        <th>Age</th>
+                        <th>Blood Type</th>
+                        <th>Time For Calling</th>
+                    </tr>
+                    @foreach ($data as $item)
+                        <tr>
+                        <td>{{ $item->name }}</td>
+                        <td>{{ $item->gender }}</td>
+                        <td>{{ $item->address }}</td>
+                        <td>{{ $item->phone }} - {{ $item->AnotherPhone }} </td>
+                        <td>{{ $item->age }}</td>
+                        <td>{{ $item->bloodType }}</td>
+                        <td>{{ $item->timeForCall }}</td>
+                        </tr>
+                    @endforeach
+                </table>
+
                 <div class="col-md-1"></div>
 
 

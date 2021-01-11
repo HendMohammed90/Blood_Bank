@@ -36,3 +36,9 @@ Route::get('/contact',function () {
 } );
 
 
+//Route::post('/contact', [ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
+
+Route::post('/contact' , 'ContactUsFormController@ContactUsForm')->name('contact.store');
+
+Route::post('/donerRegs' , 'DonerRegestration@create' );
+
