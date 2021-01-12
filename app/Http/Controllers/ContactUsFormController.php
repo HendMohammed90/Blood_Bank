@@ -13,8 +13,14 @@ class ContactUsFormController extends Controller
         return view('contact');
     }
 
+    //get the main page
+    public function index(){
+        return view('doner.contact');
+    }
+
     // Store Contact Form data
     public function ContactUsForm(Request $request) {
+
 
         // Form validation
         $this->validate($request, [

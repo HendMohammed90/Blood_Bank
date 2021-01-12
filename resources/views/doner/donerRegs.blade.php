@@ -81,7 +81,7 @@
                             </div>
                             <div class="form-group col-md-6">
                                 <input name="AnotherPhone" type="text" class="form-control phoneNum" id="inputPhone2"
-                                       placeholder="anthor number">
+                                       placeholder="Another number">
                             </div>
                         </div>
                         <div class="form-row">
@@ -134,13 +134,13 @@
                             <div class="form-check form-check-inline">
                                 <label class="form-check-label">
                                     <input  class="form-check-input" type="checkbox" name="callingWay"
-                                           id="inlineRadio1" value="option 1"> SMS
+                                           id="inlineRadio1" value="SMS"> SMS
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label class="form-check-label">
                                     <input class="form-check-input" type="checkbox" name="callingWay"
-                                           id="inlineRadio2" value="option 1"> phone call
+                                           id="inlineRadio2" value="Phone Call"> phone call
                                 </label>
                             </div>
                         </div>
@@ -150,13 +150,13 @@
                             <div class="form-check form-check-inline">
                                 <label class="form-check-label">
                                     <input class="form-check-input" type="radio" name="gender"
-                                           id="inlineRadio1" value="option1"> male
+                                           id="inlineRadio1" value="male"> male
                                 </label>
                             </div>
                             <div class="form-check form-check-inline">
                                 <label class="form-check-label">
                                     <input class="form-check-input" type="radio" name="gender"
-                                           id="inlineRadio2" value="option2"> female
+                                           id="inlineRadio2" value="female"> female
                                 </label>
                             </div>
                         </div>

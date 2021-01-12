@@ -63,46 +63,47 @@
                         <h2 id="heading" class=" mt-3 text-center">Doner Request</h2>
                         <div class="hBorder m-auto"></div>
                     </div>
-                    <form class="mt-5 px-4">
+                    <form class="mt-5 px-4" method="POST" action="/donerReq">
+                        @csrf
                         <div class="form-group">
-                            <input type="text" class="form-control" id="inputName" placeholder="name">
+                            <input name="name" type="text" class="form-control" id="inputName" placeholder="name">
                             <small id="passwordHelpBlock" class="form-text text-muted">
                                 Your name must be 4-20 characters long, contain letters and  spaces, and must not contain special characters, or emoji, and first letter must be camel case.
                             </small>
                         </div>
                         <div class="form-group">
-                            <input type="text" class=" form-control" id="inputAddress" placeholder="full address">
+                            <input name="address" type="text" class=" form-control" id="inputAddress" placeholder="full address">
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <input type="text" class="alaa form-control phoneNum" id="inputPhone"
+                                <input name="phone" type="text" class="alaa form-control phoneNum" id="inputPhone"
                                        placeholder="phone number">
                             </div>
                             <div class="form-group col-md-6">
-                                <input type="text" class="form-control phoneNum" id="inputPhone2"
-                                       placeholder="anthor number">
+                                <input name="AnotherPhone" type="text" class="form-control phoneNum" id="inputPhone2"
+                                       placeholder="Another number">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <select id="inputState" class="form-control alert-dark">
+                                <select name="bloodType" id="inputState" class="form-control alert-dark">
                                     <option selected>blood type</option>
-                                    <option>O+</option>
-                                    <option>O-</option>
-                                    <option>B+</option>
-                                    <option>B-</option>
-                                    <option>A+</option>
-                                    <option>A-</option>
-                                    <option>AB+</option>
-                                    <option>AB-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-" >O-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-6">
-                                <select id="inputState" class="form-control alert-dark">
+                                <select name="timeForCall" id="inputState" class="form-control alert-dark">
                                     <option selected>time of calling</option>
-                                    <option>24 hours</option>
-                                    <option>from 8am to 3pm</option>
-                                    <option>from 3pm to 11pm</option>
+                                    <option value="24 Hours">24 hours</option>
+                                    <option value="From 8 AM to 3 PM">from 8am to 3pm</option>
+                                    <option value="From 3 PM to 11 PM">from 3pm to 11pm</option>
                                 </select>
                             </div>
                         </div>
@@ -138,12 +139,31 @@
                                 </label>
                             </div>
                         </div>
-                        <button id="addBtn" type="submit" class="btn  btn-outline btn-lg rounded-0 ">SEND
-                            MESSAGE</button>
+                        <button id="addBtn" type="submit" class="btn  btn-outline btn-lg rounded-0 ">Send
+                            Request</button>
                     </form>
 
 
                 </div>
+                <table class="text-center">
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Phone Number</th>
+                        <th>Blood Type</th>
+                        <th>Time For Calling</th>
+                    </tr>
+                    @foreach ($data as $item)
+                        <tr>
+                            <td>{{ $item->name }}</td>
+                            <td>{{ $item->address }}</td>
+                            <td>{{ $item->phone }} - {{ $item->AnotherPhone }} </td>
+                            <td>{{ $item->bloodType }}</td>
+                            <td>{{ $item->timeForCall }}</td>
+                        </tr>
+                    @endforeach
+                </table>
+
                 <div class="col-md-1"></div>
 
 
