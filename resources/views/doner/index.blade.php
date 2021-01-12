@@ -86,7 +86,7 @@
                             community.
                         </p>
                         <button id="myBtn" type="submit" class="btn btn-outline rounded-2 mt-4">
-                            <a href="learn.html">Learn More</a>
+                            <a href="/">Learn More</a>
                         </button>
                     </div>
                 </div>
@@ -115,7 +115,7 @@
                             overcome most of these challenges by effectively connecting the blood donors with the blood
                             recipients. </P>
                         <button id="myBtn" type="submit" class="btn btn-outline rounded-2 mt-4">
-                            <a href="donerRegs.html">Get Appointment</a>
+                            <a href="/donerRegs">Get Appointment</a>
                         </button>
                     </div>
 

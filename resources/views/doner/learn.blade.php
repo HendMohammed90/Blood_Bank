@@ -70,7 +70,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row py-4">
+            <div class="row py-4 pt-4">
                 <div class=" col-lg-3">
                     <p class="comp">Red Blood Cells:</p>
                     <p>Red blood cells represent 40%-45% of your blood volume.They are generated from your bone marrow
@@ -88,7 +88,11 @@
                     <p> Although white blood cells only account for about 1% of your blood, they are very important.</p>
                 </div>
                 <div class="col-lg-6">
-                    <div> <img class="img-fluid" src="images/component_n.jpg" > </div>
+                    <div>
+{{--                        component_n--}}
+                        <img class="img-fluid" style="max-height: 400px" src="{{ URL::to('images/OC1OWB0.jpg') }}">
+
+                    </div>
                 </div>
             </div>
         </div>

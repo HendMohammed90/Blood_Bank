@@ -12,7 +12,8 @@
 {{--    <link rel="stylesheet" type="text/css" href="{{url('css/index_style.css')}}">--}}
 
     <link rel="stylesheet"  type="text/css" href="{{url('css/bootstrap.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url('css/all.min.css')}}" >
+{{--    <link rel="stylesheet" type="text/css" href="{{url('css/all.min.css')}}" >--}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/v4-shims.min.csshttps://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/FontAwesome.otf" integrity="sha512-p++g4gkFY8DBqLItjIfuKJPFvTPqcg2FzOns2BNaltwoCOrXMqRIOqgWqWEvuqsj/3aVdgoEo2Y7X6SomTfUPA==" crossorigin="anonymous" />
     <link rel="stylesheet" type="text/css" href="{{url('css/index_style.css')}}">
 
     <title>blood donation</title>
@@ -62,13 +63,13 @@
                         <h4 class="text-white">Pages</h4>
                         <div>
                             <ul class="p-0">
-                                <li> <i class="fas fa-angle-right"></i> <a href="index.html"> Home</a> </li>
-                                <li> <i class="fas fa-angle-right"></i> <a href="donerRegs.html">Doner
+                                <li> <i class="fas fa-angle-right"></i> <a href="/"> Home</a> </li>
+                                <li> <i class="fas fa-angle-right"></i> <a href="/donerRegs">Doner
                                         Registration</a> </li>
-                                <li> <i class="fas fa-angle-right"></i> <a href="donerReq.html">doner Request </a>
+                                <li> <i class="fas fa-angle-right"></i> <a href="/donerReq">doner Request </a>
                                 </li>
-                                <li> <i class="fas fa-angle-right"></i> <a href="learn.html">Learn</a> </li>
-                                <li> <i class="fas fa-angle-right"></i> <a href="contact.html">Contact</a> </li>
+                                <li> <i class="fas fa-angle-right"></i> <a href="/learn">Learn</a> </li>
+                                <li> <i class="fas fa-angle-right"></i> <a href="/contact">Contact</a> </li>
                             </ul>
                         </div>
                     </div>
